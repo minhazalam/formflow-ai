@@ -1,38 +1,40 @@
 # 🚀 FormFlow AI
 
-**Human-in-the-loop OCR-powered form automation tool**
+![Python](https://img.shields.io/badge/Python-3.9%2B-blue)
+![Playwright](https://img.shields.io/badge/Automation-Playwright-green)
+![OCR](https://img.shields.io/badge/OCR-Tesseract-orange)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+![Status](https://img.shields.io/badge/Status-Active-success)
+
+> **Human-in-the-loop OCR-powered form automation system**
+> Extract data from images → auto-fill forms → validate in real UI → submit → repeat.
 
 ---
 
-## 🧠 Overview
+## ✨ Overview
 
-FormFlow AI extracts structured data from images and assists users in entering it into web forms with human validation.
+FormFlow AI is designed to automate repetitive data entry workflows while keeping humans in control.
 
-Instead of blindly automating data entry, it keeps the user in control:
-
-* Auto-fills form fields
-* User reviews & edits in the actual web app
-* User clicks **Save/Update**
-* System moves to next record
+It extracts structured data from images using OCR, processes it into records, and assists users in entering the data into web forms. Users review and correct data directly in the target application before submission.
 
 ---
 
-## ⚙️ Workflow
+## 🧠 How It Works
 
-```
+```text id="flow-final"
 Images → OCR → Parsing → Records Queue → Auto-fill Form → Human Review → Submit → Next Record
 ```
 
 ---
 
-## 🔥 Features
+## 🔥 Key Features
 
-* 📸 OCR-based data extraction (Tesseract)
-* 🧠 Smart parsing with error handling
-* 🔁 Retry mechanism for failed records
-* 🧑 Human-in-the-loop validation (in browser)
-* 🔗 Config-driven field mapping
-* 📝 Logging & resumable execution
+* 📸 OCR-based data extraction using Tesseract
+* 🧩 Structured parsing with normalization and validation
+* 🔁 Retry mechanism with logging and error handling
+* 🧑 Human-in-the-loop validation inside the actual web application
+* 🔗 Config-driven field mapping (no code changes required)
+* ⚡ Lightweight and local-first design
 
 ---
 
@@ -44,29 +46,97 @@ Images → OCR → Parsing → Records Queue → Auto-fill Form → Human Review
 
 ---
 
-## ▶️ Run Locally
+## 📁 Project Structure
 
-```bash
-pip install -r requirements.txt
-playwright install
-python main.py
-```
-
-Install Tesseract:
-
-```bash
-brew install tesseract
+```text id="struct-final"
+app/        # OCR, parser, automation
+utils/      # logging, file handling
+config/     # form and parsing configurations
+data/       # input images and runtime data
 ```
 
 ---
 
-## 📁 Project Structure
+## ⚙️ Setup & Run
 
+### 1. Create Virtual Environment
+
+```bash id="venv-final"
+python -m venv venv
 ```
-app/        # core logic (OCR, parser, automation)
-utils/      # helpers (logger, file handler)
-config/     # form + parsing configs
-data/       # images + output
+
+Activate:
+
+* **Mac/Linux**
+
+```bash id="mac-final"
+source venv/bin/activate
+```
+
+* **Windows**
+
+```bash id="win-final"
+venv\Scripts\activate
+```
+
+---
+
+### 2. Install Dependencies
+
+```bash id="deps-final"
+pip install -r requirements.txt
+playwright install
+```
+
+---
+
+### 3. Install Tesseract OCR
+
+* **Mac (Homebrew)**
+
+```bash id="mac-tess-final"
+brew install tesseract
+```
+
+* **Ubuntu / Linux**
+
+```bash id="linux-tess-final"
+sudo apt update
+sudo apt install tesseract-ocr
+```
+
+* **Windows**
+
+1. Download installer from:
+   https://github.com/tesseract-ocr/tesseract
+2. Install it
+3. Add to PATH:
+
+   ```
+   C:\Program Files\Tesseract-OCR
+   ```
+
+> ⚠️ Verify installation:
+
+```bash id="verify-final"
+tesseract --version
+```
+
+---
+
+### 4. Run the Application
+
+```bash id="run-final"
+python main.py
+```
+
+---
+
+## 🧪 Example Input
+
+```text id="example-final"
+xt1234 john doe california
+xt5678 alice smith new york
 ```
 
 ---
@@ -74,21 +144,27 @@ data/       # images + output
 ## 🚀 Use Cases
 
 * Data entry automation
-* Back-office operations
-* Form filling workflows
-* Manual-to-digital conversion
+* Back-office workflows
+* OCR-based ingestion pipelines
+* Form processing systems
 
 ---
 
-## ⚡ Future Improvements
+## 🛣️ Roadmap
 
-* Dashboard UI
+* Streamlit-based review dashboard
 * Multi-form support
-* AI-based parsing fallback
-* Bulk processing
+* AI-assisted parsing fallback
+* Batch processing enhancements
+
+---
+
+## 📜 License
+
+MIT License © 2026 Minhaz Alam
 
 ---
 
 ## 👤 Author
 
-Minhaz Alam
+**Minhaz Alam**
