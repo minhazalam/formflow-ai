@@ -36,6 +36,7 @@ Images → OCR → Parsing → Records Queue → Auto-fill Form → Human Review
 * 🧑 Human-in-the-loop validation inside the actual web application
 * 🔗 Config-driven field mapping (no code changes required)
 * ⚡ Lightweight and local-first design
+* 💻 CLI support for modular pipeline execution
 
 ---
 
@@ -54,6 +55,8 @@ app/        # OCR, parser, automation
 utils/      # logging, file handling
 config/     # form and parsing configurations
 data/       # input images and runtime data
+cli.py      # CLI interface
+main.py     # entry point
 ```
 
 ---
@@ -127,8 +130,23 @@ tesseract --version
 
 ### 4. Run the Application
 
-```bash id="run-final"
+FormFlow AI supports a **basic CLI interface** for modular execution.
+
+#### ▶️ Run Full Pipeline (Default)
+
+```bash
 python main.py
+```
+Runs: OCR → Parsing → Automation
+
+## 🧪 Example Workflow
+
+```bash
+# Step 1: Extract records
+python main.py extract
+
+# Step 2: Run automation
+python main.py run
 ```
 
 ---
