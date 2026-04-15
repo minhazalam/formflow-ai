@@ -1,3 +1,12 @@
+"""
+Module: cli.py
+
+Description:
+Provides command-line interface for running FormFlow AI pipeline.
+
+Author: Minhaz Alam
+Created: 2026-04-16
+"""
 import argparse
 from main import process_images
 from utils.file_handler import load_records
