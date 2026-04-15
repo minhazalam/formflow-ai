@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+venv/
+.env
+data/output/
+data/logs/
+.DS_Store
+.idea/
+
+# Optional: ignore user images if sensitive
+# data/images/

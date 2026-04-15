@@ -1,0 +1,10 @@
+{
+  "url": "https://example.com/form",
+  "fields": {
+    "record_id": "#record_id",
+    "fname": "#fname",
+    "lname": "#lname",
+    "address": "#address"
+  },
+  "submit_button": "#submit"
+}
