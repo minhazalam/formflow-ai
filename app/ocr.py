@@ -1,3 +1,12 @@
+"""
+Module: ocr.py
+
+Description:
+Handles OCR extraction from images using Tesseract.
+
+Author: Minhaz Alam
+Created: 2026-04-16
+"""
 import pytesseract
 from PIL import Image
 import shutil
@@ -16,6 +25,15 @@ def get_tesseract_path():
 
 
 def extract_lines(image_path):
+    """
+    Extract text lines from an image using OCR.
+
+    Args:
+        image_path (str): Path to the image file
+
+    Returns:
+        list: Cleaned list of extracted text lines
+    """
     try:
         # Set path dynamically
         pytesseract.pytesseract.tesseract_cmd = get_tesseract_path()

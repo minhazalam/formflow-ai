@@ -1,3 +1,12 @@
+"""
+Module: logger.py
+
+Description:
+Configures and provides application-wide logging.
+
+Author: Minhaz Alam
+Created: 2026-04-16
+"""
 import logging
 import os
 

@@ -1,3 +1,13 @@
+"""
+Module: main.py
+
+Description:
+Handles image processing pipeline including OCR extraction and parsing.
+Acts as the core pipeline logic for FormFlow AI.
+
+Author: Minhaz Alam
+Created: 2026-04-16
+"""
 import os
 from app.ocr import extract_lines
 from app.parser import parse_lines
@@ -8,6 +18,15 @@ IMAGE_FOLDER = "data/images"
 
 
 def process_images():
+    """
+    Process all images from the input folder and extract structured records.
+
+    Performs OCR on images, parses extracted text into structured records,
+    and stores them in the output file.
+
+    Returns:
+        list: List of extracted records
+    """
     logger = get_logger()
     all_records = load_records()
 

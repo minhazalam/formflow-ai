@@ -1,3 +1,12 @@
+"""
+Module: automation.py
+
+Description:
+Handles browser automation to fill forms using Playwright.
+
+Author: Minhaz Alam
+Created: 2026-04-16
+"""
 from playwright.sync_api import sync_playwright
 from app.config_loader import load_config
 from utils.file_handler import save_records
@@ -13,6 +22,15 @@ def fill_form(page, record, config):
 
 
 def run_automation(records):
+    """
+    Execute automation workflow to fill web forms.
+
+    Args:
+        records (list): List of records to process
+
+    Returns:
+        None
+    """
 
     logger = get_logger()
     config = load_config()

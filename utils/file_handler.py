@@ -1,3 +1,12 @@
+"""
+Module: file_handler.py
+
+Description:
+Handles reading and writing of records to JSON storage.
+
+Author: Minhaz Alam
+Created: 2026-04-16
+"""
 import json
 import os
 
