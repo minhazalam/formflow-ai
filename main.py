@@ -2,7 +2,6 @@ import os
 from app.ocr import extract_lines
 from app.parser import parse_lines
 from utils.file_handler import save_records, load_records
-from app.automation import run_automation
 from utils.logger import get_logger
 
 IMAGE_FOLDER = "data/images"
@@ -41,15 +40,7 @@ def process_images():
     return all_records
 
 
+# 👇 NEW ENTRY POINT (delegates to CLI)
 if __name__ == "__main__":
-
-    logger = get_logger()
-    logger.info("🚀 Starting FormFlow AI")
-
-    records = process_images()
-
-    if not records:
-        logger.warning("❌ No records found")
-    else:
-        logger.info(f"✅ Total records: {len(records)}")
-        run_automation(records)
+    from cli import run_cli
+    run_cli()
