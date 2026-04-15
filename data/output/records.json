@@ -1,0 +1,42 @@
+[
+  {
+    "record_id": "xt1001",
+    "fname": "john",
+    "lname": "doe",
+    "address": "california",
+    "status": "pending",
+    "retry_count": 0
+  },
+  {
+    "record_id": "yt1002",
+    "fname": "alice",
+    "lname": "smith",
+    "address": "new york",
+    "status": "pending",
+    "retry_count": 0
+  },
+  {
+    "record_id": "xt1003",
+    "fname": "michael",
+    "lname": "brown",
+    "address": "texas",
+    "status": "pending",
+    "retry_count": 0
+  },
+  {
+    "record_id": "yt1004",
+    "fname": "emily",
+    "lname": "johnson",
+    "address": "florida",
+    "status": "pending",
+    "retry_count": 0
+  },
+  {
+    "record_id": "vt1005",
+    "fname": "david",
+    "lname": "wilson",
+    "address": "washington",
+    "status": "pending",
+    "retry_count": 0
+  }
+]

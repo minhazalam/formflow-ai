@@ -3,8 +3,8 @@ __pycache__/
 venv/
 .env
 # Ignore contents but keep folder
-data/output/*
-data/logs/*
+# data/output/*
+# data/logs/*
 
 # Keep folder placeholders
 !data/output/.gitkeep

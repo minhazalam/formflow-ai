@@ -1,0 +1,12 @@
+2026-04-14 16:26:38,190 - INFO - 🚀 Starting FormFlow AI
+2026-04-14 16:26:38,190 - WARNING - ❌ No records found
+2026-04-14 16:35:42,240 - INFO - 🚀 Starting FormFlow AI
+2026-04-14 16:35:42,240 - INFO - 📸 Processing image: image1.png
+2026-04-14 16:35:42,624 - WARNING - ❌ No records found
+2026-04-14 16:45:46,672 - INFO - 🚀 Starting FormFlow AI
+2026-04-14 16:45:46,672 - INFO - 📸 Processing image: test.png
+2026-04-14 16:45:46,871 - INFO - ✅ Total records: 5
+2026-04-14 16:45:55,157 - INFO - ➡️ Processing record: {'record_id': 'xt1001', 'fname': 'john', 'lname': 'doe', 'address': 'california', 'status': 'pending', 'retry_count': 0}
+2026-04-14 16:46:13,757 - ERROR - Future exception was never retrieved
+future: <Future finished exception=TargetClosedError('Target page, context or browser has been closed')>
+playwright._impl._errors.TargetClosedError: Target page, context or browser has been closed
