@@ -1,3 +1,12 @@
+"""
+Module: parser.py
+
+Description:
+Parses OCR text lines into structured records.
+
+Author: Minhaz Alam
+Created: 2026-04-16
+"""
 def parse_line(line):
     parts = line.split()
 
@@ -15,6 +24,15 @@ def parse_line(line):
 
 
 def parse_lines(lines):
+    """
+    Convert raw text lines into structured records.
+
+    Args:
+        lines (list): List of text lines
+
+    Returns:
+        tuple: (records list, errors list)
+    """
     records = []
     errors = []
 
